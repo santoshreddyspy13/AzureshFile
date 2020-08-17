@@ -17,8 +17,9 @@ cd terraform
 
 unzip redlog.zip
 
-cp -R redlog/* /var/www/html/
+mv * /var/www/html/
 apachectl restart
 
 mysql -uroot -p$dbpass -e 'create database redlog'
-mysql -uroot -p$dbpass redlog < redlog.sql
+mysql -uroot -p$dbpass redlog < /var/www/html/redlog.sql
+rm /var/www/html/redlog.sql
