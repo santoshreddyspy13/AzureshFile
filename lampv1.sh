@@ -20,5 +20,5 @@ unzip redlog.zip
 cp -R redlog/* /var/www/html/
 apachectl restart
 
-mysql -uroot -p$dbpass -e 'create database red'
-mysql -uroot -p$dbpass red < redlog.sql
+mysql -uroot -p$dbpass -e 'create database redlog'
+mysql -uroot -p$dbpass redlog < redlog.sql
